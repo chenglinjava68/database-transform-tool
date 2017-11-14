@@ -5,7 +5,7 @@
 
 ## 产品特色：
 
-1.Canal监控
+1.Canal监控【MySQL|MariaDB】
 
 2.数据资源类型
 
@@ -15,7 +15,7 @@
 
 3）SQL服务[MySQL|SQL　Server|Oracle]
 
-4）数据仓库(Greenplum)
+4）数据仓库(GreenPlum|PostgreSQL)
 
 5）消息队列(Kafka)
 
