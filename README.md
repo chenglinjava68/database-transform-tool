@@ -1,5 +1,9 @@
 # database-transform-tool
-数据(库/源)转换工具
+## 产品说明：
+
+通过图形界面为数据监控以及数据同步提高良好的服务，可支持数据同步的数据源或数据库有：SQL数据源【Oracle|SQL Server|MySQL】、NoSQL数据源【MongoDB|Cassandra|Redis】、数据引擎【Elasticsearch】、数据仓库【GreenPlum|PostgreSQL】、消息队列【Kafka】；通过Canal可支持【MySQL|MariaDB】数据库监控以及数据备份。
+
+## 产品特色：
 
 1.Canal监控
 
