@@ -27,11 +27,11 @@ import com.datastax.driver.mapping.Mapper.Option;
 import com.datastax.driver.mapping.MappingManager;
 
 /**
- * @decription Cassandra数据服务封装
+ * 描述: Cassandra数据服务封装
+ * 时间: 2017年11月15日 上午11:24:49
  * @author yi.zhang
- * @time 2017年6月2日 下午2:48:49
  * @since 1.0
- * @jdk 1.8
+ * JDK版本:1.8
  */
 @SuppressWarnings("all")
 public class CassandraFactory {
@@ -83,9 +83,13 @@ public class CassandraFactory {
 	}
 
 	/**
-	 * @decription 初始化配置
+	 * 描述: 初始化配置
+	 * 时间: 2017年11月15日 上午11:25:07
 	 * @author yi.zhang
-	 * @time 2017年6月2日 下午2:15:57
+	 * @param servers	服务地址
+	 * @param keyspace	命名空间
+	 * @param username	账号
+	 * @param password	密码
 	 */
 	public void init(String servers,String keyspace,String username,String password) {
 		try {
@@ -147,11 +151,11 @@ public class CassandraFactory {
 	}
 
 	/**
-	 * @decription 保存数据
+	 * 描述: 保存数据
+	 * 时间: 2017年11月15日 上午11:26:42
 	 * @author yi.zhang
-	 * @time 2017年6月2日 下午6:18:49
-	 * @param obj
-	 * @return
+	 * @param obj	对象
+	 * @return	返回值
 	 */
 	public int save(Object obj) {
 		try {
@@ -169,11 +173,11 @@ public class CassandraFactory {
 	}
 
 	/**
-	 * @decription 更新数据
+	 * 描述: 更新数据
+	 * 时间: 2017年11月15日 上午11:26:42
 	 * @author yi.zhang
-	 * @time 2017年6月2日 下午6:19:08
-	 * @param obj
-	 * @return
+	 * @param obj	对象
+	 * @return	返回值
 	 */
 	public int update(Object obj) {
 		try {
@@ -191,11 +195,11 @@ public class CassandraFactory {
 	}
 
 	/**
-	 * @decription 删除数据
+	 * 描述: 删除数据
+	 * 时间: 2017年11月15日 上午11:26:42
 	 * @author yi.zhang
-	 * @time 2017年6月2日 下午6:19:25
-	 * @param obj
-	 * @return
+	 * @param obj	对象
+	 * @return	返回值
 	 */
 	public int delete(Object obj) {
 		try {
@@ -213,12 +217,12 @@ public class CassandraFactory {
 	}
 
 	/**
-	 * @decription 数据操作(Insert|Update|Delete)
+	 * 描述: 数据操作(Insert|Update|Delete)
+	 * 时间: 2017年11月15日 上午11:27:52
 	 * @author yi.zhang
-	 * @time 2017年6月2日 下午6:19:40
-	 * @param cql
-	 * @param params
-	 * @return
+	 * @param cql	cql语句
+	 * @param params	参数
+	 * @return	返回值
 	 */
 	public int executeUpdate(String cql, Object... params) {
 		try {
@@ -235,15 +239,12 @@ public class CassandraFactory {
 	}
 
 	/**
-	 * @decription 数据库查询(Select)
+	 * 描述: 数据库查询(Select)
+	 * 时间: 2017年11月15日 上午11:28:42
 	 * @author yi.zhang
-	 * @time 2017年6月2日 下午2:16:12
-	 * @param cql
-	 *            cql语句
-	 * @param params
-	 *            占位符参数
-	 * @param clazz
-	 *            映射对象
+	 * @param cql	cql语句
+	 * @param clazz	映射对象
+	 * @param params	占位符参数
 	 * @return
 	 */
 	public List<?> executeQuery(String cql, Class clazz, Object... params) {
@@ -294,9 +295,9 @@ public class CassandraFactory {
 	}
 	
 	/**
-	 * @decription 查询数据表字段名(key:字段名,value:字段类型名)
+	 * 描述: 查询数据表字段名(key:字段名,value:字段类型名)
+	 * 时间: 2017年11月15日 上午11:29:32
 	 * @author yi.zhang
-	 * @time 2017年6月30日 下午2:16:02
 	 * @param table	表名
 	 * @return
 	 */
@@ -320,11 +321,10 @@ public class CassandraFactory {
 		return null;
 	}
 	/**
-	 * @decription 查询数据库表名[未实现]
+	 * 描述: 查询数据库表名[未实现]
+	 * 时间: 2017年11月15日 上午11:29:59
 	 * @author yi.zhang
-	 * @time 2017年6月30日 下午2:16:02
-	 * @param table	表名
-	 * @return
+	 * @return 返回表
 	 */
 	@Deprecated
 	public List<String> queryTables(){

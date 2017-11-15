@@ -80,9 +80,16 @@ public class JDBCFactory {
 		this.init_pool_size = init_pool_size;
 	}
 	/**
-	 * @decription 数据库或数据仓库配置
+	 * 描述: 数据库或数据仓库配置
+	 * 时间: 2017年11月15日 上午11:35:08
 	 * @author yi.zhang
-	 * @time 2017年6月2日 下午2:15:57
+	 * @param driverName	驱动
+	 * @param url			URL地址
+	 * @param username	用户名
+	 * @param password	密码
+	 * @param isDruid	是否使用Druid
+	 * @param max_pool_size	最大连接池数
+	 * @param init_pool_size	最小连接池
 	 */
 	public void init(String driverName,String url,String username,String password,boolean isDruid,Integer max_pool_size,Integer init_pool_size){
 		try {
@@ -112,12 +119,12 @@ public class JDBCFactory {
 		}
 	}
 	/**
-	 * @decription 数据库操作(Insert|Update|Delete)
+	 * 描述: 数据操作(Insert|Update|Delete)
+	 * 时间: 2017年11月15日 上午11:27:52
 	 * @author yi.zhang
-	 * @time 2017年6月2日 下午2:16:12
-	 * @param sql		sql语句
-	 * @param params	占位符参数
-	 * @return
+	 * @param sql	sql语句
+	 * @param params	参数
+	 * @return	返回值
 	 */
 	public int executeUpdate(String sql,Object...params ){
 		try {
@@ -139,12 +146,12 @@ public class JDBCFactory {
 		return -1;
 	}
 	/**
-	 * @decription 数据库查询(Select)
+	 * 描述: 数据库查询(Select)
+	 * 时间: 2017年11月15日 上午11:28:42
 	 * @author yi.zhang
-	 * @time 2017年6月2日 下午2:16:12
-	 * @param sql		sql语句
+	 * @param sql	sql语句
+	 * @param clazz	映射对象
 	 * @param params	占位符参数
-	 * @param clazz		映射对象
 	 * @return
 	 */
 	@SuppressWarnings({ "rawtypes", "unchecked" })
@@ -203,9 +210,9 @@ public class JDBCFactory {
 		return null;
 	}
 	/**
-	 * @decription 查询数据表字段名(key:字段名,value:字段类型名)
+	 * 描述: 查询数据表字段名(key:字段名,value:字段类型名)
+	 * 时间: 2017年11月15日 上午11:29:32
 	 * @author yi.zhang
-	 * @time 2017年6月30日 下午2:16:02
 	 * @param table	表名
 	 * @return
 	 */
@@ -234,11 +241,10 @@ public class JDBCFactory {
 		return null;
 	}
 	/**
-	 * @decription 查询数据库表名
+	 * 描述: 查询数据库表名
+	 * 时间: 2017年11月15日 上午11:29:59
 	 * @author yi.zhang
-	 * @time 2017年6月30日 下午2:16:02
-	 * @param table	表名
-	 * @return
+	 * @return 返回表
 	 */
 	public List<String> queryTables(){
 		try {

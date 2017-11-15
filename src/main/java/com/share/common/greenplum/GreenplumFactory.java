@@ -10,11 +10,11 @@ import com.share.common.jdbc.JDBCFactory;
 
 
 /**
- * @decription 数据仓库(Greenplum)服务封装
+ * 描述: 数据仓库(Greenplum)服务封装
+ * 时间: 2017年11月15日 上午11:30:36
  * @author yi.zhang
- * @time 2017年6月2日 下午2:45:10
  * @since 1.0
- * @jdk 1.8
+ * JDK版本:1.8
  */
 public class GreenplumFactory extends JDBCFactory {
 	private static Logger logger = LogManager.getLogger();
@@ -29,9 +29,17 @@ public class GreenplumFactory extends JDBCFactory {
 	private int init_pool_size=10;
 	
 	/**
-	 * @decription 初始化配置
+	 * 描述: 初始化配置
+	 * 时间: 2017年11月15日 上午11:30:53
 	 * @author yi.zhang
-	 * @time 2017年6月2日 下午2:15:57
+	 * @param address	地址
+	 * @param database	认证数据库
+	 * @param schema	操作数据库
+	 * @param username	用户名
+	 * @param password	密码
+	 * @param isDruid	是否使用Druid
+	 * @param max_pool_size	最大连接池数
+	 * @param init_pool_size	最小连接池
 	 */
 	public void init(String address,String database,String schema,String username,String password,boolean isDruid,Integer max_pool_size,Integer init_pool_size){
 		try {
@@ -45,12 +53,12 @@ public class GreenplumFactory extends JDBCFactory {
 	}
 	
 	/**
-	 * @decription 数据库操作(Insert|Update|Delete)
+	 * 描述: 数据操作(Insert|Update|Delete)
+	 * 时间: 2017年11月15日 上午11:27:52
 	 * @author yi.zhang
-	 * @time 2017年6月2日 下午2:16:12
-	 * @param sql		sql语句
-	 * @param params	占位符参数
-	 * @return
+	 * @param sql	sql语句
+	 * @param params	参数
+	 * @return	返回值
 	 */
 	public int executeUpdate(String sql,Object...params ){
 		try {
@@ -65,12 +73,12 @@ public class GreenplumFactory extends JDBCFactory {
 		return -1;
 	}
 	/**
-	 * @decription 数据库查询(Select)
+	 * 描述: 数据库查询(Select)
+	 * 时间: 2017年11月15日 上午11:28:42
 	 * @author yi.zhang
-	 * @time 2017年6月2日 下午2:16:12
-	 * @param sql		sql语句
+	 * @param sql	sql语句
+	 * @param clazz	映射对象
 	 * @param params	占位符参数
-	 * @param clazz		映射对象
 	 * @return
 	 */
 	@SuppressWarnings("rawtypes")
@@ -87,9 +95,9 @@ public class GreenplumFactory extends JDBCFactory {
 		return null;
 	}
 	/**
-	 * @decription 查询数据表字段名(key:字段名,value:字段类型名)
+	 * 描述: 查询数据表字段名(key:字段名,value:字段类型名)
+	 * 时间: 2017年11月15日 上午11:29:32
 	 * @author yi.zhang
-	 * @time 2017年6月30日 下午2:16:02
 	 * @param table	表名
 	 * @return
 	 */
@@ -109,9 +117,9 @@ public class GreenplumFactory extends JDBCFactory {
 		return null;
 	}
 	/**
-	 * @decription SQL语句处理
+	 * 描述: SQL语句处理
+	 * 时间: 2017年11月15日 上午11:34:01
 	 * @author yi.zhang
-	 * @time 2017年6月30日 下午3:24:58
 	 * @param sql	SQL语句
 	 * @return
 	 */
